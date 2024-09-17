@@ -6,10 +6,10 @@ import {buildResolvers} from './buildResolvers';
 import {WebpackOptions} from './types';
 
 export const buildWebpack = (options: WebpackOptions): Configuration => {
-  const {envs, isDev, paths} = options;
+  const {mode, isDev, paths} = options;
 
   return {
-    mode: envs.mode ?? 'development',
+    mode: mode ?? 'development',
     entry: paths.entry,
     output: {
       path: paths.output,
@@ -29,5 +29,8 @@ export const buildWebpack = (options: WebpackOptions): Configuration => {
       rules: buildLoaders(options),
     },
     resolve: buildResolvers(options),
+    watchOptions: {
+      ignored: /node_modules/,
+    },
   };
 };

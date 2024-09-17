@@ -12,13 +12,18 @@ export default (envs: WebpackEnvs): Configuration => {
     output: resolve(__dirname, 'build'),
     src: resolve(__dirname, 'src'),
     html: resolve(__dirname, 'public', 'index.html'),
+    public: resolve(__dirname, 'public'),
   };
 
   const options: WebpackOptions = {
-    isDev,
-    isProd,
+    isDev: isDev ?? true,
+    isProd: isProd ?? false,
     envs,
     paths,
+    environment: envs.environment ?? 'app',
+    port: envs.port ?? 3000,
+    isBundleAnalyzer: envs.isBundleAnalyzer ?? false,
+    mode: envs.mode ?? 'development',
   };
 
   return buildWebpack(options);

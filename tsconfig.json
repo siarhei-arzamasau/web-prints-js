@@ -1,15 +1,18 @@
 {
   "compilerOptions": {
     "outDir": "./build/",
-    "baseUrl": ".",
     "noImplicitAny": true,
     "module": "ESNext",
-    "target": "es5",
+    "target": "ES2020",
     "jsx": "react-jsx",
     "allowJs": true,
     "moduleResolution": "node",
-    "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "isolatedModules": true,
+    "baseUrl": ".",
+    "types": ["node"],
     "paths": {
       "@/*": ["src/*"],
       "@pages/*": ["src/pages/*"],
@@ -18,15 +21,17 @@
       "@entities/*": ["src/entities/*"],
       "@shared/*": ["src/shared/*"],
     },
+    
   },
   "ts-node": {
     "compilerOptions": {
-      "module": "CommonJS"
+      "module": "CommonJS",
     }
   },
   "include": [
     "./global.d.ts",
     "./src/**/*.ts",
-    "./src/**/*.tsx"
+    "./src/**/*.tsx",
+    "./config/**/*.ts",
   ]
 }

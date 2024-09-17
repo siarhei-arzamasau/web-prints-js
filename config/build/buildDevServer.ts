@@ -10,5 +10,6 @@ export const buildDevServer = (options: WebpackOptions): DevServerConfiguration 
     port: envs.port,
     open: true,
     static: './build',
+    historyApiFallback: true,
   };
 };

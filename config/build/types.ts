@@ -1,6 +1,19 @@
+export type WebpackRunMode = 'development' | 'production';
+
+// Add storybook, cypress, playwright ?
+export type AppEnvironment = 'app' | 'jest';
+
+export type AppEnvs = {
+  __IS_DEV__: string;
+  __IS_PROD__: string;
+  __ENVIRONMENT__: AppEnvironment;
+};
+
 export type WebpackEnvs = {
-  mode: 'development' | 'production';
+  mode: WebpackRunMode;
+  environment: AppEnvironment;
   port: number;
+  isBundleAnalyzer: boolean;
 };
 
 export type WebpackPaths = {
@@ -8,10 +21,15 @@ export type WebpackPaths = {
   output: string;
   html: string;
   src: string;
+  public: string;
 };
 
 export type WebpackOptions = {
   envs: WebpackEnvs;
+  mode: WebpackRunMode;
+  environment: AppEnvironment;
+  port: number;
+  isBundleAnalyzer: boolean;
   paths: WebpackPaths;
   isDev: boolean;
   isProd: boolean;
