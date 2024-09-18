@@ -12,7 +12,7 @@
     "strict": true,
     "isolatedModules": true,
     "baseUrl": ".",
-    "types": ["node"],
+    "types": ["node", "jest"],
     "paths": {
       "@/*": ["src/*"],
       "@pages/*": ["src/pages/*"],

@@ -9,7 +9,7 @@ export const buildWebpack = (options: WebpackOptions): Configuration => {
   const {mode, isDev, paths} = options;
 
   return {
-    mode: mode ?? 'development',
+    mode,
     entry: paths.entry,
     output: {
       path: paths.output,
@@ -24,10 +24,11 @@ export const buildWebpack = (options: WebpackOptions): Configuration => {
           runtimeChunk: 'single',
         }
       : undefined,
-    devtool: isDev && 'inline-source-map',
+    devtool: isDev ? 'inline-source-map' : false,
     module: {
       rules: buildLoaders(options),
     },
+    target: 'browserslist',
     resolve: buildResolvers(options),
     watchOptions: {
       ignored: /node_modules/,
