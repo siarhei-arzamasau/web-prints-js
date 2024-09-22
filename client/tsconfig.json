@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "outDir": "./build/",
+    "outDir": "./build",
     "noImplicitAny": true,
     "module": "ESNext",
     "target": "ES2020",
@@ -20,7 +20,7 @@
       "@features/*": ["src/features/*"],
       "@entities/*": ["src/entities/*"],
       "@shared/*": ["src/shared/*"],
-      "~shared": ["shared"],
+      "~shared": ["../shared"],
     },
   },
   "ts-node": {

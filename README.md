@@ -6,17 +6,24 @@
 
 ### Скрипты
 
-`npm run build:dev` - Сборка bundle в dev режиме  
-`npm run build:prod` - Сборка bundle в prod режиме  
-`npm run build:prod:analyzer` - Сборка bundle в prod режиме c включенным анализатором
-
-`npm run start` - Старт дев сервера, только client  
-`npm run start:dev` - Старт дев сервера, client + server  
-`npm run start:dev:server` - Старт дев сервера, только server
-
-`npm run lint:ts` - Проверка всего TS кода Eslint  
-`npm run lint:ts:fix` - Проверка всего TS кода Eslint и fix  
-`npm run lint:css` - Проверка всего СSS кода Stylelint  
-`npm run lint:css:fix` - Проверка всего TS кода Stylelint и fix
-
-`npm run test` - Запуск unit тестов
+- `prepare` - Инициализация Husky хуков.
+- `build:dev` - Сборка клиента и сервера в dev режиме.
+- `build:dev:client` - Сборка клиента в dev режиме.
+- `build:dev:server` - Сборка сервера в dev режиме.
+- `build:prod` - Сборка клиента и сервера в prod режиме.
+- `build:prod:client` - Сборка клиента в prod режиме.
+- `build:prod:server` - Сборка сервера в prod режиме.
+- `start:dev` - Запуск dev серверов для клиента и сервера одновременно.
+- `start:dev:client` - Запуск dev сервера только для клиента.
+- `start:dev:server` - Запуск dev сервера только для сервера.
+- `lint:ts` - Проверка TypeScript кода с помощью ESLint.
+- `lint:ts:fix` - Проверка и автоматическое исправление ошибок в TypeScript коде с помощью ESLint.
+- `lint:css` - Проверка CSS файлов с помощью Stylelint.
+- `lint:css:fix` - Проверка и автоматическое исправление ошибок в CSS файлах с помощью Stylelint.
+- `test` - Запуск тестов как для клиента, так и для сервера.
+- `test:client` - Запуск тестов для клиента.
+- `test:server` - Запуск тестов для сервера.
+- `client:install` - Установка зависимостей в директории клиента.
+- `server:install` - Установка зависимостей в директории сервера.
+- `postinstall` - Установка зависимостей как для клиента, так и для сервера после выполнения основного `npm install`.
+- `clear:cache` - Очистка кэша с помощью скрипта `clearCache.js`.

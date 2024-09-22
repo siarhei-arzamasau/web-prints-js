@@ -1,7 +1,7 @@
 const {rmSync, existsSync} = require('fs');
 const {join} = require('path');
 
-const clientCache = join(__dirname, '..', 'node_modules', '.cache');
+const clientCache = join(__dirname, '..', 'client', 'node_modules', '.cache');
 const serverCache = join(__dirname, '..', 'server', 'node_modules', '.cache');
 
 if (existsSync(clientCache)) {

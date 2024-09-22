@@ -1,13 +1,13 @@
 module.exports = {
   root: true,
-  env: { browser: true, es2020: true },
+  env: {browser: true, es2020: true},
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:react-hooks/recommended',
     'plugin:prettier/recommended',
   ],
-  ignorePatterns: ['.eslintrc.cjs', 'build/**/*'],
+  ignorePatterns: ['.eslintrc.cjs', 'client/build/**/*', 'server/build/**/*'],
   parser: '@typescript-eslint/parser',
   plugins: ['prettier', 'react-refresh'],
   rules: {
@@ -16,7 +16,7 @@ module.exports = {
     'quotes': ['error', 'single'],
     'react-refresh/only-export-components': [
       'warn',
-      { allowConstantExport: true },
+      {allowConstantExport: true},
     ],
     'prefer-rest-params': 0,
     '@typescript-eslint/no-unsafe-declaration-merging': 0,
