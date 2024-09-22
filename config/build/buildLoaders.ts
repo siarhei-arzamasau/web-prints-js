@@ -15,20 +15,20 @@ export const buildLoaders = (options: WebpackOptions): ModuleOptions['rules'] =>
     },
   };
 
+  const tsLoader = {
+    loader: 'ts-loader',
+    options: {
+      transpileOnly: isDev,
+      getCustomTransformers: () => ({
+        before: [isDev && ReactRefreshTypeScript()].filter(Boolean),
+      }),
+    },
+  };
+
   return [
     {
       test: /\.tsx?$/,
-      use: [
-        {
-          loader: 'ts-loader',
-          options: {
-            transpileOnly: isDev,
-            getCustomTransformers: () => ({
-              before: [isDev && ReactRefreshTypeScript()].filter(Boolean),
-            }),
-          },
-        },
-      ],
+      use: [tsLoader],
       exclude: /node_modules/,
     },
     {

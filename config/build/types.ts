@@ -1,6 +1,5 @@
 export type WebpackRunMode = 'development' | 'production';
 
-// Add storybook, cypress, playwright ?
 export type AppEnvironment = 'app' | 'jest';
 
 export type AppEnvs = {

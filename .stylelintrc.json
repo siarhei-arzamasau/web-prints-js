@@ -4,5 +4,8 @@
     "selector-class-pattern": null,
     "block-no-empty": null ,
     "no-descending-specificity": null
-  }
+  },
+  "ignoreFiles": [
+    "build/**/*"
+  ]
 }
