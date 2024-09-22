@@ -21,6 +21,7 @@ export type WebpackPaths = {
   html: string;
   src: string;
   public: string;
+  shared: string;
 };
 
 export type WebpackOptions = {

@@ -20,8 +20,8 @@
       "@features/*": ["src/features/*"],
       "@entities/*": ["src/entities/*"],
       "@shared/*": ["src/shared/*"],
+      "~shared": ["shared"],
     },
-    
   },
   "ts-node": {
     "compilerOptions": {

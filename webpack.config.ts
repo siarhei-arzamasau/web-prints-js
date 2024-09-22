@@ -13,6 +13,7 @@ export default (envs: WebpackEnvs): Configuration => {
     src: resolve(__dirname, 'src'),
     html: resolve(__dirname, 'public', 'index.html'),
     public: resolve(__dirname, 'public'),
+    shared: resolve(__dirname, 'shared'),
   };
 
   const options: WebpackOptions = {

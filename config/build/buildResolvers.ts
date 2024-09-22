@@ -14,6 +14,7 @@ export const buildResolvers = (options: WebpackOptions): ResolveOptions => {
       '@features': resolve(paths.src, 'features'),
       '@entities': resolve(paths.src, 'entities'),
       '@shared': resolve(paths.src, 'shared'),
+      '~shared': resolve(paths.shared),
     },
   };
 };
