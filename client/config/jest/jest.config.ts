@@ -10,8 +10,6 @@ const config: Config = {
   rootDir: '../../',
   testMatch: ['<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)'],
   modulePaths: ['<rootDir>src'],
-  // Add latest
-  // setupFilesAfterEnv: ['<rootDir>config/jest/setupTests.ts'],
   moduleNameMapper: {
     '\\.css$': 'identity-obj-proxy',
     '\\.svg': resolve(__dirname, 'jestEmptyComponent.tsx'),

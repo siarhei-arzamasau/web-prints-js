@@ -18,7 +18,6 @@ export const buildWebpack = (options: WebpackOptions): Configuration => {
     },
     plugins: buildPlugins(options),
     devServer: buildDevServer(options),
-    // ? optimization
     optimization: isDev
       ? {
           runtimeChunk: 'single',

@@ -20,18 +20,18 @@
       "@features/*": ["src/features/*"],
       "@entities/*": ["src/entities/*"],
       "@shared/*": ["src/shared/*"],
-      "~shared": ["../shared"],
+      "~shared": ["../shared"]
     },
   },
   "ts-node": {
     "compilerOptions": {
-      "module": "CommonJS",
+      "module": "CommonJS"
     }
   },
   "include": [
     "./global.d.ts",
     "./src/**/*.ts",
     "./src/**/*.tsx",
-    "./config/**/*.ts",
+    "./config/**/*.ts"
   ]
 }

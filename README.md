@@ -1,8 +1,48 @@
 # Web Blueprints
 
-<image src="./public/logo.svg" width="400px" alt="project logo">
+<image src="./client/public/logo.svg" width="400px" alt="project logo">
 
-### Движок для визуального программирования.
+## Движок для визуального программирования.
+
+### Запуск проекта
+
+1. Установить все зависимости для клиента и сервера, запустив команду:
+
+```bash
+ npm i
+```
+
+- (Опционально) Если не сработал скрипт `postinstall`, установить зависимости для клиента и сервера самостоятельно:
+
+```bash
+ npm run postinstall
+```
+
+Или
+
+```bash
+ npm run client:install && npm run server:install
+```
+
+2. Запустить в режиме DEV:
+
+Клиент + север:
+
+```bash
+ npm run start:dev
+```
+
+Только клиент:
+
+```bash
+ npm run start:dev:client
+```
+
+Только сервер:
+
+```bash
+ npm run start:dev:server
+```
 
 ### Скрипты
 

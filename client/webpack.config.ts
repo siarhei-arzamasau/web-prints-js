@@ -17,14 +17,14 @@ export default (envs: WebpackEnvs): Configuration => {
   };
 
   const options: WebpackOptions = {
-    isDev: isDev ?? true,
-    isProd: isProd ?? false,
+    isDev: isDev || true,
+    isProd: isProd || false,
     envs,
     paths,
-    environment: envs.environment ?? 'app',
-    port: envs.port ?? 3000,
-    isBundleAnalyzer: envs.isBundleAnalyzer ?? false,
-    mode: envs.mode ?? 'development',
+    environment: envs.environment || 'app',
+    port: envs.port || 3000,
+    isBundleAnalyzer: envs.isBundleAnalyzer || false,
+    mode: envs.mode || 'development',
   };
 
   return buildWebpack(options);
