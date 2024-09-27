@@ -1,7 +1,17 @@
 // index.tsx - entry point
+import {StrictMode} from 'react';
+import {createRoot} from 'react-dom/client';
 
-import {DiagramNode} from '~shared';
+import App from './app/App';
 
-const a = {} as DiagramNode;
+// import {DiagramNode} from '~shared';
+// const a = {} as DiagramNode;
 
-console.log('Hello, world!', a);
+const container = document.querySelector('#root') as HTMLElement;
+const root = createRoot(container);
+
+root.render(
+  <StrictMode>
+    <App />
+  </StrictMode>,
+);
