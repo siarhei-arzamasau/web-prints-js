@@ -1,10 +1,11 @@
+import {Providers} from './providers/providers';
 import {AppRouter} from './routers/appRouter';
 
 const App = () => {
   return (
-    <div>
+    <Providers>
       <AppRouter />
-    </div>
+    </Providers>
   );
 };
 
