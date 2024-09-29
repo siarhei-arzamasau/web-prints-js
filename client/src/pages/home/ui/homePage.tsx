@@ -1,5 +1,5 @@
-import * as S from './homePage.module.css';
+import * as s from './homePage.module.css';
 
 export const HomePage = () => {
-  return <div className={S.page}>HomePage</div>;
+  return <div className={s.page}>HomePage</div>;
 };

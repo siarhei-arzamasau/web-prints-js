@@ -1,16 +1,17 @@
 import {Routes, Route, BrowserRouter} from 'react-router-dom';
 
-import {EditorPage} from '@/pages/editor';
-import {HomePage} from '@/pages/home';
-import {Layout} from '../layout/layout';
+import {Layout} from '@app/layout';
+import {EditorPage} from '@pages/editor';
+import {HomePage} from '@pages/home';
+import {RouterPaths} from '@/shared/consts';
 
 export const AppRouter = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<Layout />}>
+        <Route path={RouterPaths.Home} element={<Layout />}>
           <Route index element={<HomePage />} />
-          <Route path='editor' element={<EditorPage />} />
+          <Route path={RouterPaths.Editor} element={<EditorPage />} />
         </Route>
       </Routes>
     </BrowserRouter>

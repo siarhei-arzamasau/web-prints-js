@@ -1,2 +1,2 @@
-export type RootState = ReturnType<typeof import('../store').store.getState>;
-export type AppDispatch = typeof import('../store').store.dispatch;
+declare type RootState = ReturnType<typeof import('../providers/store-provider/config/store').store.getState>;
+declare type AppDispatch = typeof import('../providers/store-provider/config/store').store.dispatch;

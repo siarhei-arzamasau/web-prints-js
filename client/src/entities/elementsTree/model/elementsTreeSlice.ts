@@ -19,4 +19,4 @@ const elementsTreeSlice = createSlice({
 });
 
 export const {parsed} = elementsTreeSlice.actions;
-export default elementsTreeSlice.reducer;
+export const elementsTreeReducer = elementsTreeSlice.reducer;
