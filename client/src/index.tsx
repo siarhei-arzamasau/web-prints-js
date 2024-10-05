@@ -1,8 +1,8 @@
 // index.tsx - entry point
 import {StrictMode} from 'react';
 import {createRoot} from 'react-dom/client';
-
 import {App} from './app';
+import './index.css';
 
 // import {DiagramNode} from '~shared';
 // const a = {} as DiagramNode;
