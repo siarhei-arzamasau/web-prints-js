@@ -14,6 +14,7 @@ const config: Config = {
     '\\.css$': 'identity-obj-proxy',
     '\\.svg': resolve(__dirname, 'jestEmptyComponent.tsx'),
     '^@/(.*)$': '<rootDir>/src/$1',
+    '^@app/(.*)$': '<rootDir>/src/app/$1',
     '^@pages/(.*)$': '<rootDir>/src/pages/$1',
     '^@widgets/(.*)$': '<rootDir>/src/widgets/$1',
     '^@features/(.*)$': '<rootDir>/src/features/$1',
