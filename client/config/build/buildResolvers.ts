@@ -9,6 +9,7 @@ export const buildResolvers = (options: WebpackOptions): ResolveOptions => {
     extensions: ['.tsx', '.ts', '.js'],
     alias: {
       '@': paths.src,
+      '@app': resolve(paths.src, 'app'),
       '@pages': resolve(paths.src, 'pages'),
       '@widgets': resolve(paths.src, 'widgets'),
       '@features': resolve(paths.src, 'features'),
